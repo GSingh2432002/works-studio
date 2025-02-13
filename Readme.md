@@ -42,4 +42,4 @@ works-studio/
 - Adjust styles in `style.css` as needed.
 
 ## Credits
-Developed by [@https://github.com/GSingh2432002].
+Developed by [https://github.com/GSingh2432002].
