@@ -32,14 +32,22 @@ function loader() {
   tl.to("#loader", {
     opacity: 0,
   });
-
   tl.to("#loader", {
     display: "none",
   });
 }
 loader();
 
-const scroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true,
-});
+// const scroll = new LocomotiveScroll({
+//   el: document.querySelector("#main"),
+//   smooth: true,
+// });
+
+var element = document.querySelectorAll(".element");
+element.forEach(function(ele) {
+    ele.addEventListener("mouseenter", function() {
+        var bgImage = ele.getAttribute("data-img")
+        console.log(bgImage);
+        
+    })
+})
