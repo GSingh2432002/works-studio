@@ -5,13 +5,14 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
 }
 
 #main {
-    background-color: #000;
+    background-color: transparent;
 }
 
 #loader {
@@ -71,6 +72,23 @@ html, body {
     justify-content: space-between;
 }
 
+.nav-right {
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 0%;
+}
+
+.nav-right h5 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 24px 24px;
+    z-index: 10;
+    display: inline-block;
+    font-size: 1vw;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 #page1 {
     height: 100vh;
     width: 100%;
@@ -116,7 +134,6 @@ html, body {
 }
 
 .element {
-    /* background-color: red; */
     width: 100%;
     position: relative;
     cursor: pointer;
@@ -142,7 +159,6 @@ html, body {
     top: 50%;
     transform: translate(0, -45%) scaleY(0);
     transition: all ease 0.3s;
-    /* z-index: 5; */
 }
 
 .element .moving .moving-in {
@@ -171,6 +187,7 @@ html, body {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-100%);
     }
@@ -193,23 +210,20 @@ html, body {
     width: 100%;
     background-color: #fff;
     position: relative;
-    /* padding: 0 0 15vh 0; */
-    height: auto;         /* Added to ensure it grows with content */
-    overflow: visible;    /* Added to prevent content cutting */
+    height: auto;
+    overflow: visible;
 }
 
 .image-container {
-    padding: 5.5vh;
+    padding: 5vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
-    height: auto;         /* Added to ensure it grows with content */
-    /* margin-bottom: 5vh; */
+    height: auto;
 }
 
 .image-div {
-    /* height: 40vw; */
     width: 28vw;
     margin: 1vw;
     overflow: hidden;
@@ -229,39 +243,36 @@ html, body {
     opacity: 0.6;
     scale: 1.03;
 }
-/* #page3 {
-    min-height: 100vh;
+
+#footer {
     width: 100%;
-    position: relative;
     background-color: #fff;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.image-container {
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
+#footer i {
+    font-size: 2.3vw;
+    color: #000;
+    cursor: pointer;
+    animation: blinkUp 1s infinite ease-in-out;
 }
 
-.image-div {
-    height: 30vw;
-    width: 22vw;
-    position: relative;
-    overflow: hidden;
-    margin: 40px 20px;
-}
+@keyframes blinkUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 
-.image-div img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: all ease 0.3s;
-}
+    50% {
+        transform: translateY(-10px);
+        opacity: 0.5;
+    }
 
-.image-div:hover img {
-    opacity: 0.6;
-    scale: 1.03;
-} */
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -43,6 +43,10 @@ const scroll = new LocomotiveScroll({
   smooth: true,
 });
 
+document.querySelector("#footer i").addEventListener("click", function() {
+    scroll.scrollTo(0);
+})
+
 var element = document.querySelectorAll(".element");
 var page2 = document.querySelector("#page2");
 element.forEach(function (ele) {
@@ -56,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function setRandomHeights() {
     const images = document.querySelectorAll(".image-div img");
     images.forEach((img) => {
-      const randomHeight = Math.random() * (50 - 35) + 3;
+      const randomHeight = Math.random() * (50 - 35) + 30;
       img.style.height = `${randomHeight}vw`;
     });
   }
