@@ -92,6 +92,8 @@ html, body {
     height: 100vh;
     width: 100%;
     background-color: #000;
+    background-size: cover;
+    background-position: center;
     color: #fff;
     display: flex;
     align-items: center;
@@ -106,7 +108,7 @@ html, body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: linear-gradient(to right, #f5e31bf0, #F5E41B, #f5e31bf0);
+    background: linear-gradient(to right, #f5e31b, #F5E41B, #f5e31b);
     box-shadow: 10px 0px 20px 20px #F5E41B, -10px 0px 20px 100px #F5E41B;
     height: 100%;
     z-index: 8;
@@ -186,9 +188,80 @@ html, body {
     font-style: italic;
 }
 
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    /* padding: 0 0 15vh 0; */
+    height: auto;         /* Added to ensure it grows with content */
+    overflow: visible;    /* Added to prevent content cutting */
+}
+
+.image-container {
+    padding: 5.5vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;         /* Added to ensure it grows with content */
+    /* margin-bottom: 5vh; */
+}
+
+.image-div {
+    /* height: 40vw; */
+    width: 28vw;
+    margin: 1vw;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 3/4;
+}
+
+.image-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all ease 0.3s;
+}
+
+.image-div:hover img {
+    opacity: 0.6;
+    scale: 1.03;
+}
 /* #page3 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     position: relative;
     background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.image-div {
+    height: 30vw;
+    width: 22vw;
+    position: relative;
+    overflow: hidden;
+    margin: 40px 20px;
+}
+
+.image-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.3s;
+}
+
+.image-div:hover img {
+    opacity: 0.6;
+    scale: 1.03;
 } */

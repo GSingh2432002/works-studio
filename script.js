@@ -38,16 +38,27 @@ function loader() {
 }
 loader();
 
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector("#main"),
-//   smooth: true,
-// });
+const scroll = new LocomotiveScroll({
+  el: document.querySelector("#main"),
+  smooth: true,
+});
 
 var element = document.querySelectorAll(".element");
-element.forEach(function(ele) {
-    ele.addEventListener("mouseenter", function() {
-        var bgImage = ele.getAttribute("data-img")
-        console.log(bgImage);
-        
-    })
-})
+var page2 = document.querySelector("#page2");
+element.forEach(function (ele) {
+  ele.addEventListener("mouseenter", function () {
+    var bgImage = ele.getAttribute("data-img");
+    page2.style.backgroundImage = `url(${bgImage})`;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  function setRandomHeights() {
+    const images = document.querySelectorAll(".image-div img");
+    images.forEach((img) => {
+      const randomHeight = Math.random() * (50 - 35) + 3;
+      img.style.height = `${randomHeight}vw`;
+    });
+  }
+  setRandomHeights();
+});
